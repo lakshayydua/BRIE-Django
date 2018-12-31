@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Overview</title>
+  <!-- Bootstrap core CSS-->
+  <link href="../../static/basic_frame/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="../../static/basic_frame/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="../../static/basic_frame/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="../../static/basic_frame/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #393939">
+    <a class="navbar-brand" href="/brie/">B.R.I.E.</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="background-color: #222222">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="/brie/search">
+            <span class="nav-link-text">Explore</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="/brie/overview">
+            <span class="nav-link-text">Overview Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="/brie/recommendation">
+            <span class="nav-link-text">Recommendation</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link" href="/brie/authors">
+            <span class="nav-link-text">Authors</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+          <a class="nav-link" href="/brie/publishers">
+            <span class="nav-link-text">Publishers</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link" href="/brie/evaluation">
+            <span class="nav-link-text">Evaluation</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+        <h1><center>An Overview of Book Results</center></h1>
+        <br/><br/>
+        <div>
+            {% if most_popular_genres_div %}
+                <div >
+                  <center>
+                {{most_popular_genres_div|safe}}
+                    </center>
+                </div>
+                {% endif %}
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  {% if genres_by_year_div %}
+                        <div >
+                            <center>
+                        {{genres_by_year_div|safe}}
+                           </center>
+                        </div>
+                        {% endif %}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <br/>
+                   {% if languages_by_year_div %}
+                        <div >
+                          <center>
+                        {{languages_by_year_div|safe}}
+                            </center>
+                        </div>
+                        {% endif %}
+                    </div>
+            </div>
+
+            {% if priciest_genres_div %}
+                <div >
+                   <center>
+                {{priciest_genres_div|safe}}
+                      </center>
+                </div>
+                {% endif %}
+            <br/><br/>
+
+            {% if avg_pages_per_yrange_div %}
+                <div >
+                   <center>
+                {{avg_pages_per_yrange_div|safe}}
+                      </center>
+                </div>
+                {% endif %}
+
+            <br/><br/>
+
+            {% if books_by_month_div %}
+                <div >
+                   <center>
+                {{books_by_month_div|safe}}
+                      </center>
+                </div>
+                {% endif %}
+
+            <br/><br/>
+
+            {% if avg_price_per_page_div %}
+                <div >
+                   <center>
+                {{avg_price_per_page_div|safe}}
+                      </center>
+                </div>
+                {% endif %}
+
+          <br/><br/>
+
+            <center><b><h2>Wordclouds: Famous Words by Years</h2></b> </center>
+            <div>
+                <img src="../../static/img/image5.png", alt= '1800 - 1870',title='1800 - 1870'>
+                <img src="../../static/img/image4.png" , alt='1870 - 1960',title='1870 - 1960'>
+                <center>
+                <img src="../../static/img/image3.png" ,alt='1960 - 2000',title='1960 - 2000'>
+                    </center>
+                <img src="../../static/img/image1.png", alt='2000 - 2010',title='2000 - 2010'>
+                <img src="../../static/img/image2.png", alt='2010 - 2020',title='2010 - 2020'>
+
+            </div>
+        </div>
+    </div>
+
+
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-- style="width:300px;height:2000px;margin-right:100px;float:left">
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../static/basic_frame/vendor/jquery/jquery.min.js"></script>
+    <script src="../../static/basic_frame/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../../static/basic_frame/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../../static/basic_frame/vendor/chart.js/Chart.min.js"></script>
+    <script src="../../static/basic_frame/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../../static/basic_frame/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../../static/basic_frame/js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="../../static/basic_frame/js/sb-admin-datatables.min.js"></script>
+    <script src="../../static/basic_frame/js/sb-admin-charts.min.js"></script>
+  </div>
+</body>
+
+</html>

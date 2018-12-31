@@ -1,0 +1,118 @@
+#book_title_h3{
+   padding-top: 1.7%;
+   padding-left: 3%;
+   font-family: 'ontserrat','Helvetica Neue';
+   font-weight: bold;
+   }
+
+#book_author_h5{
+   padding-left: 3.5%;
+   font-family: 'Montserrat','Helvetica Neue';
+}
+
+#book_author_h5{
+   padding-left: 3.5%;
+   font-family: 'Montserrat','Helvetica Neue';
+}
+
+#desc{
+   padding-left: 3.5%;
+   font-family: 'Montserrat','Helvetica Neue';
+}
+
+.book_image{
+   padding-top: 2%;
+   float: right;
+   margin-right: 4%;
+   margin-left: 4%;
+   margin-bottom: 1%;
+   width: 17%;
+   height: 17%;
+}
+
+
+#amazon_logo{
+   margin-top: 7%;
+   width: 45%;
+   height: 4.5%;
+}
+
+#google_logo{
+   width: 60%;
+   height: 12%
+}
+
+#indie_logo{
+   margin-top: -10%;
+   width: 60%;
+   height: 35%;
+}
+
+#barnes_logo{
+   width: 60%;
+   height: 6%;
+}
+
+.price{
+   font-family: 'Montserrat','Helvetica Neue';
+   font-size: 110%;
+   color: #B12704;
+
+}
+
+#foo{
+ background: red;
+ max-height: 500px;
+ //overflow-y: hidden;
+}
+
+.bar{
+ background: blue;
+ width: 100px;
+ height: 150px;
+ float: left;
+ margin: 1em;
+}
+
+.sim_book_image{
+  width: 100%;
+  height: 100%;
+}
+.sim_book_title{
+  padding-top: 8%;
+  font-size: 85%    ;
+  //color: #0066C0;
+  color: black;
+  margin-bottom: 20%;
+  bottom:20%;
+}
+
+
+#genre_dissection{
+   width: 100%;
+  height: 100%;
+}
+
+td{
+   text-align: center;
+   height: auto;
+   width: 200px;
+}
+
+//table{
+  // width: 70%
+//}
+
+#all_price{
+   padding-left: 3.5%;
+}
+.h5_message{
+   padding-left: 3.5%;
+   font-family: 'Montserrat','Helvetica Neue';
+   margin-bottom: 1%;
+}
+#recommendation{
+   padding-left: 3%;
+   margin-bottom: 20%;
+}
+
